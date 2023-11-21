@@ -370,6 +370,7 @@ body .boton-whatsapp img {
     .wrapper main .contenedor-carrito .carrito-productos .carrito-producto {
        display: flex;
        flex-direction: column;
+       margin-bottom: 10px;
     }
     /* CONFIGURACION CONTENEDOR PRODUCTOS EN EL CARRITO */
 
@@ -449,4 +450,8 @@ body .boton-whatsapp img {
         height: 33px;
     }
     /* CONFIGURACION LUPA DE BUSQUEDA DE DIRECCION */
+
+    .wrapper main .contenedor-carrito .disabled {
+        display: none;
+    }
 }

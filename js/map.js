@@ -1,5 +1,5 @@
 // Crear un mapa Leaflet con una vista centrada donde está la sucursal y un nivel de zoom inicial de 15
-let map = L.map('map').setView([-31.434667427258436, -64.22360880344506], 15)
+let map = L.map('map').setView([-31.434667427258436, -64.22360880344506], 14)
 
 // Agrego una capa de OpenStreetMap al mapa para que el usuario pueda ver un estilo de mapa
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {

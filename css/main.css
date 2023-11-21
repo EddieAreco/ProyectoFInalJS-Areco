@@ -324,7 +324,7 @@ body .banner{
 
 .wrapper main #map{
     height: 70vh;
-    width: 100vh;
+    width: 100%;
 }
 /* CONFIGURACION DE DIMENSION DEL MAPA */
 
@@ -342,3 +342,111 @@ body .boton-whatsapp img {
     float: right;
 }
 /*CONFIGURACION BOTON WHATSAPP*/
+
+@media (max-width:575px){
+    
+    .wrapper main .productos .imagen-producto {
+        height: 180px;
+    }
+    /* CONFIGURACION LA ALTURA DE LA IMAGEN DEL PRODUCTO */
+
+    .wrapper main .input-group{
+        display: flex;
+        flex-direction: column;
+    }
+    /* CONFIGURACION GRUPO BOTONES FILTRADO */
+
+    .wrapper main .input-group select{
+        width: 100%;
+    }
+    /* CONFIGURACION SELECT DE FILTRADO */
+
+
+    .wrapper main .input-group input{
+        width: 100%;
+    }
+    /* CONFIGURACION INPUTS DE FILTRADO */
+
+    .wrapper main .contenedor-carrito .carrito-productos .carrito-producto {
+       display: flex;
+       flex-direction: column;
+    }
+    /* CONFIGURACION CONTENEDOR PRODUCTOS EN EL CARRITO */
+
+    .wrapper main .contenedor-carrito .carrito-productos .carrito-producto .carrito-producto-imagen {
+        width: 8rem;
+        height: 8rem;
+        border-radius: 1rem;
+    }
+    /* CONFIGURACION IMAGEN PRODUCTOS EN EL CARRITO */
+
+    .wrapper main .contenedor-carrito .carrito-productos .carrito-producto .carrito-producto-nombre{
+        display: flex;
+        align-items: center;
+    }
+    /* CONFIGURACION SECCION TITULO PRODUCTOS EN EL CARRITO */
+
+    .wrapper main .contenedor-carrito .carrito-productos .carrito-producto .carrito-producto-nombre h3{
+        margin-left: 10px;
+        font-size: 1rem;
+    }
+    /* CONFIGURACION SECCION TITULO NOMBRE DE PRODUCTO EN EL CARRITO */
+
+    .wrapper main .contenedor-carrito .carrito-productos .carrito-producto .carrito-producto-cantidad{
+        display: flex;
+        align-items: center;
+    }
+    /* CONFIGURACION SECCION CANTIDAD PRODUCTOS EN EL CARRITO */
+
+    .wrapper main .contenedor-carrito .carrito-productos .carrito-producto .carrito-producto-cantidad small{
+        margin-right: 15px;
+    }
+
+    .wrapper main .contenedor-carrito .carrito-productos .carrito-producto .carrito-producto-precio{
+        display: flex;
+        align-items: center;
+    }
+    /* CONFIGURACION SECCION PRECIO PRODUCTOS EN EL CARRITO */
+
+    .wrapper main .contenedor-carrito .carrito-productos .carrito-producto .carrito-producto-precio small{
+        margin-right: 15px;
+    }
+
+    .wrapper main .contenedor-carrito .carrito-productos .carrito-producto .cantidad-producto-subtotal{
+        display: flex;
+        align-items: center;
+    }
+    /* CONFIGURACION SECCION SUB TOTAL PRODUCTOS EN EL CARRITO */
+
+    .wrapper main .contenedor-carrito .carrito-productos .carrito-producto .cantidad-producto-subtotal small{
+        margin-right: 15px;
+    }
+
+    .wrapper main .contenedor-carrito .carrito-acciones {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    /* CONFIGURACION CONTENEDOR BOTONES DE PRODUCTOS EN EL CARRITO */
+
+    .wrapper main .contenedor-carrito .carrito-acciones .carrito-acciones-izquierda .carrito-acciones-vaciar{
+        width: 100%;
+        margin-bottom: 8px;
+    }
+    /* CONFIGURACION BOTON VACIAR PRODUCTOS EN EL CARRITO */
+
+    .wrapper main .contenedor-carrito .carrito-acciones-derecha{
+        display: flex;
+        flex-direction: column;
+    }
+    /* CONFIGURACION BOTONES DERECHA DE PRODUCTOS EN EL CARRITO */
+
+    .wrapper main .contenedor-carrito .carrito-acciones .carrito-acciones-derecha .carrito-acciones-total{
+        margin-bottom: 8px;
+    }
+
+    .wrapper main .input-group .boton-lupa{
+        height: 33px;
+    }
+    /* CONFIGURACION LUPA DE BUSQUEDA DE DIRECCION */
+}

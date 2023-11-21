@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque&family=Montserrat:wght@200&family=Roboto&family=Rubik:wght@300&display=swap');
+
+:root {
+    --clr-main: #242121;
+    --clr-mainlight: #f77b06;
+    --clr-white: #ffffff;
+    --clr-red: #961818;
+    --clr-gray: #eddddd;
+}
+/* DEFINO LAS VARIABLES GLOBALES DE LOS COLORES */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', Times, serif;
+}
+/* RESTABLEZCO VALORES QUE ESTAN POR DEFECTO */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+input,
+textarea,
+ul {
+    margin: 0;
+    padding: 0;
+    color: var(--clr-mainlight);
+}
+
+ul {
+    list-style-type: none;
+}
+/* QUITO EL ESTILO DE LAS LISTAS */
+
+a {
+    text-decoration: none;
+    color: var(--clr-white);
+}
+/* QUITO EL SUBRAYADO DE LOS ENLACES */
+
+body .banner{
+    background-color: var(--clr-mainlight);
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    background-color: var(--clr-main);
+}
+/* CONFIGURO EL CONTENEDOR GENERAL */
+
+.wrapper aside {
+    padding: 2rem;
+    padding-right: 0;
+    color: var(--clr-white);
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* CONFIGURO EL ASIDE (LA PARTE IZQUIERDA DEL SITIO) */
+
+.wrapper aside .logo {
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+/* CONFIGURO EL LOGO */
+
+.wrapper aside nav .menu {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+/* CONFIGURO LA BARRA DE NAVEGACION LATERAL */
+
+.wrapper aside nav .menu li .boton-menu {
+    background-color: transparent;
+    border: 0;
+    color: var(--clr-white);
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 600;
+    padding: 1rem;
+    font-size: .85rem;
+    width: 100%;
+}
+/* CONFIGURO EL LOS BOTONES DEL ASIDE */
+
+.wrapper aside nav .menu li .boton-menu.active {
+    background-color: var(--clr-white);
+    color: var(--clr-main);
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    position: relative;
+}
+/* CONFIGURO LOS BOTONES QUE TENGAN UN ACTIVE EN SU CLASE */
+
+.wrapper aside nav .menu li .boton-menu.active a {
+    color: var(--clr-main);
+    font-weight: 900;
+}
+/* CONFIGURO EL TEXTO DENTRO DE LOS BOTONES QUE TENGAN EL ACTIVE */
+
+.wrapper aside nav .menu li .boton-menu.active::before {
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 2rem;
+    bottom: 100%;
+    right: 0;
+    border-bottom-right-radius: .5rem;
+    box-shadow: 0 1rem 0 var(--clr-white);
+}
+/* CONFIGURACION DE EFECTO DEL ASIDE CON EL MAIN PARA QUE PAREZCAN QUE ESTAN UNIDOS */
+
+.wrapper aside nav .menu li .boton-menu.active::after {
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 2rem;
+    top: 100%;
+    right: 0;
+    border-top-right-radius: .5rem;
+    box-shadow: 0 -1rem 0 var(--clr-white);
+}
+/* CONFIGURACION DE EFECTO DEL ASIDE CON EL MAIN PARA QUE PAREZCAN QUE ESTAN UNIDOS */
+
+.wrapper aside nav .menu li .boton-menu.boton-carrito {
+    margin-top: 2rem;
+}
+
+.wrapper aside nav .menu li .boton-menu.boton-carrito .numero {
+    background-color: var(--clr-white);
+    color: var(--clr-main);
+    padding: 0.15rem .25rem;
+    border-radius: .25rem;
+}
+/* CONFIGURACION DEL NUMERO DEL CARRITO */
+
+.wrapper aside nav .menu li .boton-menu.boton-carrito.active .numero {
+    background-color: var(--clr-main);
+    color: var(--clr-white);
+}
+
+.wrapper aside nav .menu li .boton-menu .bi-hand-index-thumb-fill {
+    transform: rotateZ(90deg);
+}
+/* CONFIGURACION LA MANO QUE ESTA EN LA SECCION VINO */
+
+.wrapper aside footer .texto-footer {
+    color: var(--clr-mainlight);
+    font-size: 0.85rem;
+}
+
+.wrapper main {
+    background-color: var(--clr-white);
+    margin: 1rem;
+    margin-left: 0;
+    border-radius: 2rem;
+    padding: 3rem;
+}
+/* CONFIGURACION DEL MAIN (PARTE DERECHA DE LA PAGINA) */
+
+.wrapper main .titulo-principal {
+    color: var(--clr-mainlight);
+    margin-bottom: 1rem;
+    font-weight: 900;
+}
+/* CONFIGURACION DEL TITULO DEL MAIN */
+
+.wrapper main .productos {
+    border-radius: 1rem;
+}
+
+.wrapper main .productos .imagen-producto {
+    height: 250px;
+}
+/* CONFIGURACION LA ALTURA DE LA IMAGEN DEL PRODUCTO */
+
+.wrapper main .productos .tarjeta-producto {
+    background-color: var(--clr-main);
+    color: var(--clr-white);
+    padding: .5rem;
+    border-radius: 1rem;
+    margin-top: -1rem;
+    position: relative;
+    gap: 0.25rem;
+    width: 100%;
+}
+/* CONFIGURACION LA CAJA QUE CONTIENE PRECIO, TITULO, BOTON DE COMPRA, ETC */
+
+.wrapper main .productos .tarjeta-producto .disabled{
+    display: none;
+}
+
+.wrapper main .productos .tarjeta-producto .producto {
+    font-size: 1rem;
+}
+
+.wrapper main .productos .tarjeta-producto .comprar {
+    border: 0;
+    color: var(--clr-mainlight);
+    cursor: pointer;
+}
+/* CONFIGURACION BOTON DE COMPRA */
+
+.wrapper main .productos .tarjeta-producto small {
+    color: var(--clr-mainlight);
+}
+/* CONFIGURACION DEL TEXTO DE DESCUENTO */
+
+/* SECCION CARRITO.HTML */
+
+.wrapper main .contenedor-carrito {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+/* CONFIGURACION DEL CONTENEDOR DONDE ESTAN LOS PRODUCTOS Y LA ACCIONES SOBRE EL CARRITO */
+
+.wrapper main .contenedor-carrito .carrito-vacio {
+    color: var(--clr-main);
+    font-weight: 900;
+}
+/* CONFIGURACION DEL TEXTO CARRITO VACIO */
+
+.wrapper main .contenedor-carrito .carrito-productos .carrito-producto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--clr-gray);
+    color: var(--clr-main);
+    padding: .5rem;
+    padding-right: 1.5rem;
+    font-weight: 900;
+    border-radius: 1rem;
+}
+/* CONFIGURACION DEL CONTENEDOR DONDE ESTAN LOS PRODUCTOS COMPRADOS DEL CARRITO */
+
+.wrapper main .contenedor-carrito .carrito-productos .carrito-producto .carrito-producto-imagen {
+    width: 4rem;
+    border-radius: 1rem;
+}
+
+.wrapper main .contenedor-carrito .carrito-productos .carrito-producto small {
+    font-size: .75rem;
+}
+
+.wrapper main .contenedor-carrito .carrito-productos .carrito-producto .carrito-producto-eliminar {
+    border: 0;
+    background-color: transparent;
+    color: var(--clr-red);
+    cursor: pointer;
+}
+/* CONFIGURACION DEL DEL TACHO PAR ELIMINAR PRODUCTOS */
+
+.wrapper main .contenedor-carrito .carrito-acciones {
+    display: flex;
+    justify-content: space-between;
+}
+/* CONFIGURACION DEL CONTENEDOR DONDE ESTAN LAS ACCIONES SOBRE EL CARRITO */
+
+.wrapper main .contenedor-carrito .carrito-acciones .carrito-acciones-izquierda .carrito-acciones-vaciar {
+    border: 0;
+    background-color: var(--clr-mainlight);
+    padding: 1rem;
+    border-radius: 1rem;
+    color: var(--clr-white);
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 900;
+}
+/* CONFIGURACION DEL BOTON VACIAR CARRITO */
+
+.wrapper main .contenedor-carrito .carrito-acciones .carrito-acciones-derecha {
+    display: flex;
+}
+
+.wrapper main .contenedor-carrito .carrito-acciones .carrito-acciones-derecha .carrito-acciones-total {
+    display: flex;
+    align-items: center;
+    font-weight: 900;
+    background-color: var(--clr-gray);
+    padding: 1rem;
+    color: var(--clr-mainlight);
+    text-transform: uppercase;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+/* CONFIGURACION DEL CONTENEDOR DONDE ESTAN LAS ACCIONES DE LA DERECHA */
+
+.wrapper main .contenedor-carrito .carrito-acciones .carrito-acciones-derecha .carrito-acciones-comprar {
+    border: 0;
+    background-color: var(--clr-mainlight);
+    padding: 1rem;
+    color: var(--clr-white);
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 900;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+/* CONFIGURACION DEL CONTENEDOR DONDE ESTA EL BOTON COMPRAR AHORA */
+
+.wrapper main .contenedor-carrito .disabled {
+    display: none;
+}
+
+.wrapper main .input-group button{
+    height: 50px;
+}
+/* CONFIGURACION DE LOS BOTONES DE BUSQUEDA */
+
+.wrapper main #map{
+    height: 70vh;
+    width: 100vh;
+}
+/* CONFIGURACION DE DIMENSION DEL MAPA */
+
+body .boton-whatsapp {
+    position: fixed;
+    z-index: 1;
+    bottom: 20px;
+    right: 20px;
+}
+/*CONFIGURACION BOTON WHATSAPP*/
+
+body .boton-whatsapp img {
+    width: 50px;
+    height: 50px;
+    float: right;
+}
+/*CONFIGURACION BOTON WHATSAPP*/

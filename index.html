@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emporio Areco</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <!-- Barra de envío gratis -->
+    <div class="container-fluid pt-1 pb-1 text-center banner">
+        <p class="text-light">Envíos gratis en todas las órdenes iguales o superiores a $35.000</p>
+    </div>
+
+    <!-- Contenedor principal -->
+    <div class="wrapper">
+
+        <!-- Barra lateral (aside) -->
+        <aside>
+
+            <!-- Encabezado del aside -->
+            <header>
+                <h1 class="logo">Emporio Areco</h1>
+            </header>
+
+            <!-- Menú de categorías -->
+            <nav>
+                <ul class="menu">
+
+                    <!-- Botones de categorías y enlace al carrito -->
+                    <li>
+                        <button id="ofertas" class="boton-menu boton-categoria"><i
+                                class="bi bi-star-fill"></i></i>Ofertas</button>
+                    </li>
+                    <li>
+                        <button id="gaseosas" class="boton-menu boton-categoria"><i
+                                class="bi bi-cup-straw"></i>Gaseosas</a></button>
+                    </li>
+                    <li>
+                        <button id="aguas" class="boton-menu boton-categoria"><i
+                                class="bi bi-droplet-fill"></i>Aguas</button>
+                    </li>
+                    <li>
+                        <button id="vinos" class="boton-menu boton-categoria"><i
+                                class="bi bi-hand-index-thumb-fill"></i>Vinos</button>
+                    </li>
+                    <li>
+                        <button id="alcohol" class="boton-menu boton-categoria"><i
+                                class="bi bi-trash2-fill"></i>Alcohol</button>
+                    </li>
+                    <li>
+                        <button id="cervezas" class="boton-menu boton-categoria"><i
+                                class="bi bi-stars"></i></i>Cervezas</button>
+                    </li>
+                    <li>
+                        <a class="boton-menu boton-carrito active" href="carrito.html"><i
+                                class="bi bi-cart-fill"></i>Carrito <span id="numero-carrito"
+                                class="numero">0</span></a>
+                    </li>
+                    <li>
+                        <button class="boton-menu"><i class="bi bi-geo-alt-fill"></i><a
+                                href="map.html">Ubicacion</a></button>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Pie del aside -->
+            <footer>
+                <p class="texto-footer">© 2023 Eddie Areco</p>
+            </footer>
+        </aside>
+
+        <!-- Contenido principal (main) -->
+        <main>
+
+            <!-- Título principal del main -->
+            <h2 class="titulo-principal" id="titulo-principal">Ofertas</h2>
+
+            <!--Barra e inputs de búsqueda -->
+            <input id="inputBusqueda" type="text" class="form-control fw-bolder mx-auto w-50 mb-3"
+                placeholder="Ingrese el producto que busca" aria-describedby="botonBuscar">
+            <div class="input-group mb-5 row">
+                <select id="ordenarProductos"
+                    class="form-control filter-select mx-1 col-xl-2 col-lg-2 col-md-2 col-sm-12 my-1">
+                    <option value="">Ordenar por...</option>
+                    <option value="nombre-AZ">Nombre (A-Z)</option>
+                    <option value="nombre-ZA">Nombre (Z-A)</option>
+                    <option value="precio-ascendente">Precio (menor a mayor)</option>
+                    <option value="precio-descendente">Precio (mayor a menor)</option>
+                </select>
+
+                <input id="precioMinimo" type="number" placeholder="Precio Mínimo"
+                    class="form-control fw-bolder mx-1 col-xl-2 col-lg-2 col-md-2 col-sm-12 my-1">
+                <input id="precioMaximo" type="number" placeholder="Precio Máximo"
+                    class="form-control fw-bolder mx-1 col-xl-2 col-lg-2 col-md-2 col-sm-12 my-1">
+                <button id="aplicarFiltro" class="btn btn-dark mx-1 col-xl-2 col-lg-2 col-md-2 col-sm-12 my-1">Aplicar
+                    Filtro</button>
+                <button id="limpiar"
+                    class="btn btn-dark mx-1 col-xl-2 col-lg-2 col-md-2 col-sm-12 my-1">Limpiar</button>
+            </div>
+
+            <!-- Contenedor de tarjetas de productos -->
+            <div class="row row-cols-xl-3 row-cols-lg-2 row-cols-md-2 row-col-sm-12 g-4" id="cardsProductos">
+                <!-- cartas que son con js -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Botón de WhatsApp -->
+    <a href="https://api.whatsapp.com/send?phone=5493492214274?text=Hola!, quiero hacer una consulta sobre....(colocar consulta)"
+        target="_blank" class="boton-whatsapp">
+        <img src="img/whatsapp-icon.svg">
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,420 @@
+[
+    {
+        "id": "1",
+        "titulo": "Brahma 330cc",
+        "img": "./img/brahma330.jpg",
+        "categoria": {
+            "id": "cervezas",
+            "nombre": "Cervezas"
+        },
+        "stock": 1,
+        "precio": 900
+    },
+    {
+        "id": "2",
+        "titulo": "Heineken 1lt",
+        "img": "./img/heineken.jpg",
+        "categoria": {
+            "id": "cervezas",
+            "nombre": "Cervezas"
+        },
+        "stock": 48,
+        "precio": 1800
+    },
+    {
+        "id": "3",
+        "titulo": "Andes 473cc",
+        "img": "./img/andesroja473.png",
+        "categoria": {
+            "id": "cervezas",
+            "nombre": "Cervezas"
+        },
+        "stock": 50,
+        "precio": 1100
+    },
+    {
+        "id": "4",
+        "titulo": "Vodka Skyy Ananá",
+        "img": "./img/skyyanana.jpg",
+        "categoria": {
+            "id": "alcohol",
+            "nombre": "Alcohol"
+        },
+        "stock": 12,
+        "precio": 2600
+    },
+    {
+        "id": "5",
+        "titulo": "Vino Dadá Chocolate",
+        "img": "./img/vinodadachocolate.jpg",
+        "categoria": {
+            "id": "vinos",
+            "nombre": "Vinos"
+        },
+        "stock": 6,
+        "precio": 4600
+    },
+    {
+        "id": "6",
+        "titulo": "Whisky Blue Label",
+        "img": "./img/whiskybluelabel.png",
+        "categoria": {
+            "id": "alcohol",
+            "nombre": "Alcohol"
+        },
+        "stock": 3,
+        "precio": 10000
+    },
+    {
+        "id": "7",
+        "titulo": "Vino Dadá Maracuya",
+        "img": "./img/vinodadamaracuya.jpg",
+        "categoria": {
+            "id": "vinos",
+            "nombre": "Vinos"
+        },
+        "stock": 5,
+        "precio": 4800
+    },
+    {
+        "id": "8",
+        "titulo": "Andes Rubia 473",
+        "img": "./img/andesrubia473.png",
+        "categoria": {
+            "id": "cervezas",
+            "nombre": "Cervezas"
+        },
+        "stock": 10,
+        "precio": 1050
+    },
+    {
+        "id": "9",
+        "titulo": "Ron Bacardi",
+        "img": "./img/bacardi.jpg",
+        "categoria": {
+            "id": "alcohol",
+            "nombre": "Alcohol"
+        },
+        "stock": 3,
+        "precio": 7500
+    },
+    {
+        "id": "10",
+        "titulo": "Brahma 1 lt",
+        "img": "./img/brahma.jpg",
+        "categoria": {
+            "id": "cervezas",
+            "nombre": "Cervezas"
+        },
+        "stock": 12,
+        "precio": 1550
+    },
+    {
+        "id": "11",
+        "titulo": "Fanta Naranja 1 lt",
+        "img": "./img/fantanaranja.jpg",
+        "categoria": {
+            "id": "gaseosas",
+            "nombre": "Gaseosas"
+        },
+        "stock": 12,
+        "precio": 899
+    },
+    {
+        "id": "12",
+        "titulo": "Fanta Naranja 330cc",
+        "img": "./img/fantanaranja330.png",
+        "categoria": {
+            "id": "gaseosas",
+            "nombre": "Gaseosas"
+        },
+        "stock": 12,
+        "precio": 699
+    },
+    {
+        "id": "13",
+        "titulo": "Fernet Branca 750cc",
+        "img": "./img/fernet.png",
+        "categoria": {
+            "id": "alcohol",
+            "nombre": "Alcohol"
+        },
+        "stock": 24,
+        "precio": 4400
+    },
+    {
+        "id": "14",
+        "titulo": "Quilmes Negra 473cc",
+        "img": "./img/quilmesnegra330.jpg",
+        "categoria": {
+            "id": "cervezas",
+            "nombre": "Cervezas"
+        },
+        "stock": 20,
+        "precio": 660
+    },
+    {
+        "id": "15",
+        "titulo": "Vino Santa Julia Chenin Dulce",
+        "img": "./img/santajuliachenindulce.jpg",
+        "categoria": {
+            "id": "vinos",
+            "nombre": "Vinos"
+        },
+        "stock": 6,
+        "precio": 6100
+    },
+    {
+        "id": "16",
+        "titulo": "Vodka Skyy Durazno",
+        "img": "./img/skyydurazno.jpg",
+        "categoria": {
+            "id": "alcohol",
+            "nombre": "Alcohol"
+        },
+        "stock": 12,
+        "precio": 2900
+    },
+    {
+        "id": "17",
+        "titulo": "Vodka Skyy Frutos Rojos",
+        "img": "./img/skyyfrutosrojos.jpg",
+        "categoria": {
+            "id": "alcohol",
+            "nombre": "Alcohol"
+        },
+        "stock": 12,
+        "precio": 2700
+    },
+    {
+        "id": "18",
+        "titulo": "Vodka Skyy Maracuya",
+        "img": "./img/skyymaracuya.jpg",
+        "categoria": {
+            "id": "alcohol",
+            "nombre": "Alcohol"
+        },
+        "stock": 6,
+        "precio": 2299
+    },
+    {
+        "id": "19",
+        "titulo": "Vodka Smirnoff Citrus",
+        "img": "./img/smirnoffcitrus.jpg",
+        "categoria": {
+            "id": "alcohol",
+            "nombre": "Alcohol"
+        },
+        "stock": 6,
+        "precio": 2199
+    },
+    {
+        "id": "20",
+        "titulo": "Vodka Smirnoff Frutos Rojos",
+        "img": "./img/smirnofffrutosrojos.jpg",
+        "categoria": {
+            "id": "alcohol",
+            "nombre": "Alcohol"
+        },
+        "stock": 24,
+        "precio": 2380
+    },
+    {
+        "id": "21",
+        "titulo": "Sprite 330cc",
+        "img": "./img/sprite330.jpg",
+        "categoria": {
+            "id": "gaseosas",
+            "nombre": "Gaseosas"
+        },
+        "stock": 10,
+        "precio": 699
+    },
+    {
+        "id": "22",
+        "titulo": "Sprite 1 lt",
+        "img": "./img/spritelimonada.jpg",
+        "categoria": {
+            "id": "gaseosas",
+            "nombre": "Gaseosas"
+        },
+        "stock": 12,
+        "precio": 750
+    },
+    {
+        "id": "23",
+        "titulo": "Stella 1 lt",
+        "img": "./img/stella.jpg",
+        "categoria": {
+            "id": "cervezas",
+            "nombre": "Cervezas"
+        },
+        "stock": 12,
+        "precio": 1240
+    },
+    {
+        "id": "24",
+        "titulo": "Vino Dilema Malbec",
+        "img": "./img/vinodilemamalbec.png",
+        "categoria": {
+            "id": "vinos",
+            "nombre": "Vinos"
+        },
+        "stock": 6,
+        "precio": 7200
+    },
+    {
+        "id": "25",
+        "titulo": "Vino Trumpeter Malbec",
+        "img": "./img/vinomalbectrumpeter.jpg",
+        "categoria": {
+            "id": "vinos",
+            "nombre": "Vinos"
+        },
+        "stock": 6,
+        "precio": 4900
+    },
+    {
+        "id": "26",
+        "titulo": "Vino Santa Julia Malbec",
+        "img": "./img/vinosantajuliamalbec.png",
+        "categoria": {
+            "id": "vinos",
+            "nombre": "Vinos"
+        },
+        "stock": 6,
+        "precio: ,": 5100
+    },
+    {
+        "id": "27",
+        "titulo": "Villavicencio 750cc",
+        "img": "./img/villavicencio750.png",
+        "categoria": {
+            "id": "aguas",
+            "nombre": "Aguas"
+        },
+        "stock": 12,
+        "precio": 299
+    },
+    {
+        "id": "28",
+        "titulo": "Villavicencio con gas 1500cc",
+        "img": "./img/villavicencioConGas1500.png",
+        "categoria": {
+            "id": "aguas",
+            "nombre": "Aguas"
+        },
+        "stock": 6,
+        "precio": 469
+    },
+    {
+        "id": "29",
+        "titulo": "Villavicencio 2000cc",
+        "img": "./img/villavicencio2000.png",
+        "categoria": {
+            "id": "aguas",
+            "nombre": "Aguas"
+        },
+        "stock": 6,
+        "precio": 510
+    },
+    {
+        "id": "30",
+        "titulo": "Villa del sur 6250cc",
+        "img": "./img/villaDelSur6250.png",
+        "categoria": {
+            "id": "aguas",
+            "nombre": "Aguas"
+        },
+        "stock": 6,
+        "precio": 940
+    },
+    {
+        "id": "31",
+        "titulo": "Villa del sur 2250cc",
+        "img": "./img/villaDelSur2250.png",
+        "categoria": {
+            "id": "aguas",
+            "nombre": "Aguas"
+        },
+        "stock": 6,
+        "precio": 670
+    },
+    {
+        "id": "32",
+        "titulo": "Aquarius 250ml",
+        "img": "./img/aquarius250.png",
+        "categoria": {
+            "id": "aguas",
+            "nombre": "Aguas"
+        },
+        "stock": 6,
+        "precio": 270
+    },
+    {
+        "id": "33",
+        "titulo": "Aquarius Pomelo 1500ml",
+        "img": "./img/aquariusPomelo1500.png",
+        "categoria": {
+            "id": "aguas",
+            "nombre": "Aguas"
+        },
+        "stock": 6,
+        "precio": 800
+    },
+    {
+        "id": "34",
+        "titulo": "Aquarius Pera 1500ml",
+        "img": "./img/aquariusPera1500.png",
+        "categoria": {
+            "id": "aguas",
+            "nombre": "Aguas"
+        },
+        "stock": 6,
+        "precio": 800
+    },
+    {
+        "id": "35",
+        "titulo": "Aquarius Manzana 1500ml",
+        "img": "./img/aquariusManzana1500.png",
+        "categoria": {
+            "id": "aguas",
+            "nombre": "Aguas"
+        },
+        "stock": 4,
+        "precio": 800
+    },
+    {
+        "id": "36",
+        "titulo": "Coca Cola 2250cc",
+        "img": "./img/coca2250.png",
+        "categoria": {
+            "id": "gaseosas",
+            "nombre": "Gaseosas"
+        },
+        "stock": 4,
+        "precio": 960
+    },
+    {
+        "id": "37",
+        "titulo": "Coca cola 350cc",
+        "img": "./img/cocacola350.png",
+        "categoria": {
+            "id": "gaseosas",
+            "nombre": "Gaseosas"
+        },
+        "stock": 12,
+        "precio": 560
+    },
+    {
+        "id": "38",
+        "titulo": "Pepsi Cola 2000cc",
+        "img": "./img/pepsi2000.png",
+        "categoria": {
+            "id": "gaseosas",
+            "nombre": "Gaseosas"
+        },
+        "stock": 12,
+        "precio": 870
+    }
+]

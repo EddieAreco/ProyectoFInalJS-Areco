@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de compras</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+
+    <!-- Contenedor principal -->
+    <div class="wrapper">
+
+        <!-- Barra lateral (aside) -->
+        <aside>
+
+            <!-- Encabezado del aside -->
+            <header>
+                <h1 class="logo">Emporio Areco</h1>
+            </header>
+
+            <!-- Menú de categorías -->
+            <nav>
+                <ul class="menu">
+
+                    <!-- Botones de categorías y enlace al carrito -->
+                    <li>
+                        <a class="boton-menu boton-volver" href="index.html">
+                            <i class="bi bi-arrow-left-circle-fill"></i>Seguir Comprando</a>
+                    </li>
+                    <li>
+                        <a class="boton-menu boton-carrito active" href="carrito.html">
+                            <i class="bi bi-cart-fill"></i>Carrito</a>
+                    </li>
+                    <li>
+                        <button class="boton-menu"><i class="bi bi-geo-alt-fill"></i><a
+                                href="map.html">Ubicacion</a></button>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Pie del aside -->
+            <footer>
+                <p class="texto-footer">© 2023 Eddie Areco</p>
+            </footer>
+        </aside>
+
+        <!-- Contenido principal (main) -->
+        <main>
+
+            <!-- Título principal del main -->
+            <h2 class="titulo-principal">Carrito</h2>
+            <div class="contenedor-carrito">
+
+                <!-- Mensaje de carrito vacío -->
+                <p id="carritoVacio" class="carrito-vacio">Tu carrito está vacío<i class="bi bi-emoji-frown"></i></p>
+
+                <!-- Lista de productos en el carrito -->
+                <div id="carritoProducto" class="carrito-productos row disabled">
+                    <!-- productos cargados en carrito.js -->
+                </div>
+
+                <!-- Acciones del carrito -->
+                <div id="carritoAcciones" class="carrito-acciones disabled">
+                    <div class="carrito-acciones-izquierda">
+
+                        <!-- Botón para vaciar el carrito -->
+                        <button id="vaciarCarrito" class="carrito-acciones-vaciar">Vaciar Carrito</button>
+                    </div>
+                    <div class="carrito-acciones-derecha">
+
+                        <!-- Total de la compra -->
+                        <div class="carrito-acciones-total">
+                            <p>Total : </p>
+                            <p id="total">$2000</p>
+                        </div>
+
+                        <!-- Botón para comprar -->
+                        <button id="comprar" class="carrito-acciones-comprar">Comprar ahora</button>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Botón de WhatsApp -->
+    <a href="https://api.whatsapp.com/send?phone=5493492214274?text=Hola!, quiero hacer una consulta sobre....(colocar consulta)"
+        target="_blank" class="boton-whatsapp">
+        <img src="img/whatsapp-icon.svg">
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/carrito.js"></script>
+</body>
+
+</html>

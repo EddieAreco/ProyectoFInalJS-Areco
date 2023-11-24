@@ -233,6 +233,7 @@ body .banner {
     padding-right: 1.5rem;
     font-weight: 900;
     border-radius: 1rem;
+    margin-bottom: 10px;
 }
 
 /* CONFIGURACION DEL CONTENEDOR DONDE ESTAN LOS PRODUCTOS COMPRADOS DEL CARRITO */
@@ -289,6 +290,7 @@ body .banner {
     text-transform: uppercase;
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
+    text-align: center;
 }
 
 /* CONFIGURACION DEL CONTENEDOR DONDE ESTAN LAS ACCIONES DE LA DERECHA */

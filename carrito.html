@@ -16,76 +16,87 @@
     <!-- Contenedor principal -->
     <div class="wrapper">
 
-        <!-- Barra lateral (aside) -->
-        <aside>
-
-            <!-- Encabezado del aside -->
-            <header>
-                <h1 class="logo">Emporio Areco</h1>
-            </header>
-
-            <!-- Menú de categorías -->
-            <nav>
-                <ul class="menu">
-
-                    <!-- Botones de categorías y enlace al carrito -->
-                    <li>
-                        <a class="boton-menu boton-volver" href="index.html">
-                            <i class="bi bi-arrow-left-circle-fill"></i>Seguir Comprando</a>
-                    </li>
-                    <li>
-                        <a class="boton-menu boton-carrito active" href="carrito.html">
-                            <i class="bi bi-cart-fill"></i>Carrito</a>
-                    </li>
-                    <li>
-                        <button class="boton-menu"><i class="bi bi-geo-alt-fill"></i><a
-                                href="map.html">Ubicacion</a></button>
-                    </li>
-                </ul>
-            </nav>
-
-            <!-- Pie del aside -->
-            <footer>
-                <p class="texto-footer">© 2023 Eddie Areco</p>
-            </footer>
-        </aside>
-
         <!-- Contenido principal (main) -->
         <main>
+            <div class="row mb-5 align-content-center">
+                <button class="btn mx-auto col-1" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+                    <i class="bi bi-menu-button-wide-fill h4"></i></button>
 
-            <!-- Título principal del main -->
-            <h2 class="titulo-principal">Carrito</h2>
-            <div class="contenedor-carrito">
+                <!-- Título principal del main -->
+                <h2 class="titulo-principal text-center my-auto h1 col-11">Carrito</h2>
 
-                <!-- Mensaje de carrito vacío -->
-                <p id="carritoVacio" class="carrito-vacio">Tu carrito está vacío<i class="bi bi-emoji-frown"></i></p>
+                <!-- Menu desplegable -->
+                <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+                    aria-labelledby="offcanvasWithBothOptionsLabel">
+                    <div class="offcanvas-header">
 
-                <!-- Lista de productos en el carrito -->
-                <div id="carritoProducto" class="carrito-productos row disabled">
-                    <!-- productos cargados en carrito.js -->
-                </div>
-
-                <!-- Acciones del carrito -->
-                <div id="carritoAcciones" class="carrito-acciones disabled">
-                    <div class="carrito-acciones-izquierda">
-
-                        <!-- Botón para vaciar el carrito -->
-                        <button id="vaciarCarrito" class="carrito-acciones-vaciar">Vaciar Carrito</button>
+                        <!-- Encabezado del menu desplegable -->
+                        <header>
+                            <h1 class="logo text-center">Emporio Areco</h1>
+                        </header>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
-                    <div class="carrito-acciones-derecha">
+                    <div class="offcanvas-body">
 
-                        <!-- Total de la compra -->
-                        <div class="carrito-acciones-total">
-                            <p>Total : </p>
-                            <p id="total">$2000</p>
+                        <!-- Menú de categorías -->
+                        <nav>
+                            <ul class="menu">
+
+                                <!-- Botones de categorías y enlace al carrito -->
+                                <li>
+                                    <a class="boton-menu boton-volver" href="index.html">
+                                        <i class="bi bi-arrow-left-circle-fill"></i>Seguir Comprando</a>
+                                </li>
+                                <li>
+                                    <a class="boton-menu boton-carrito active" href="carrito.html">
+                                        <i class="bi bi-cart-fill"></i>Carrito</a>
+                                </li>
+                                <li>
+                                    <button class="boton-menu"><i class="bi bi-geo-alt-fill"></i><a
+                                            href="map.html">Ubicacion</a></button>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <!-- Pie del menu desplegable -->
+                        <footer>
+                            <p class="texto-footer text-center mt-1">© 2023 Eddie Areco</p>
+                        </footer>
+                    </div>
+                </div>
+                <div class="contenedor-carrito">
+
+                    <!-- Mensaje de carrito vacío -->
+                    <p id="carritoVacio" class="carrito-vacio mt-5">Tu carrito está vacío<i class="bi bi-emoji-frown"></i>
+                    </p>
+
+                    <!-- Lista de productos en el carrito -->
+                    <div id="carritoProducto" class="carrito-productos row disabled">
+                        <!-- productos cargados en carrito.js -->
+                    </div>
+
+                    <!-- Acciones del carrito -->
+                    <div id="carritoAcciones" class="carrito-acciones disabled">
+                        <div class="carrito-acciones-izquierda">
+
+                            <!-- Botón para vaciar el carrito -->
+                            <button id="vaciarCarrito" class="carrito-acciones-vaciar">Vaciar Carrito</button>
                         </div>
+                        <div class="carrito-acciones-derecha">
 
-                        <!-- Botón para comprar -->
-                        <button id="comprar" class="carrito-acciones-comprar">Comprar ahora</button>
+                            <!-- Total de la compra -->
+                            <div class="carrito-acciones-total">
+                                <p>Total : </p>
+                                <p id="total">$2000</p>
+                            </div>
 
+                            <!-- Botón para comprar -->
+                            <button id="comprar" class="carrito-acciones-comprar">Comprar ahora</button>
+
+                        </div>
                     </div>
                 </div>
-            </div>
         </main>
     </div>
 

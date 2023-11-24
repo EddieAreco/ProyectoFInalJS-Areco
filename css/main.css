@@ -49,39 +49,38 @@ body .banner{
 }
 
 .wrapper {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
     background-color: var(--clr-main);
 }
 /* CONFIGURO EL CONTENEDOR GENERAL */
 
-.wrapper aside {
-    padding: 2rem;
-    padding-right: 0;
-    color: var(--clr-white);
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.wrapper main {
+    background-color: var(--clr-white);
+    margin: 0 2rem;
+    border-radius: 2rem;
+    padding: 3rem;
+    min-height: 100vh;
 }
-/* CONFIGURO EL ASIDE (LA PARTE IZQUIERDA DEL SITIO) */
+/* CONFIGURACION DEL MAIN */
 
-.wrapper aside .logo {
+.wrapper main .logo {
     font-weight: 400;
     font-size: 1.4rem;
 }
 /* CONFIGURO EL LOGO */
 
-.wrapper aside nav .menu {
+.wrapper main .offcanvas{
+    background-color: var(--clr-main);
+}
+/* CONFIGURO EL FONDO DEL MENU DESPLEGABLE */
+
+.wrapper main nav .menu {
     display: flex;
     flex-direction: column;
     gap: .5rem;
 }
-/* CONFIGURO LA BARRA DE NAVEGACION LATERAL */
+/* CONFIGURO LA BARRA DE NAVEGACION DEL MENU DESPLEGABLE */
 
-.wrapper aside nav .menu li .boton-menu {
+.wrapper main nav .menu li .boton-menu {
     background-color: transparent;
     border: 0;
     color: var(--clr-white);
@@ -95,9 +94,9 @@ body .banner{
     font-size: .85rem;
     width: 100%;
 }
-/* CONFIGURO EL LOS BOTONES DEL ASIDE */
+/* CONFIGURO EL LOS BOTONES DEL MENU DESPLEGABLE */
 
-.wrapper aside nav .menu li .boton-menu.active {
+.wrapper main nav .menu li .boton-menu.active {
     background-color: var(--clr-white);
     color: var(--clr-main);
     border-top-left-radius: 1rem;
@@ -106,41 +105,17 @@ body .banner{
 }
 /* CONFIGURO LOS BOTONES QUE TENGAN UN ACTIVE EN SU CLASE */
 
-.wrapper aside nav .menu li .boton-menu.active a {
+.wrapper main nav .menu li .boton-menu.active a {
     color: var(--clr-main);
     font-weight: 900;
 }
 /* CONFIGURO EL TEXTO DENTRO DE LOS BOTONES QUE TENGAN EL ACTIVE */
 
-.wrapper aside nav .menu li .boton-menu.active::before {
-    content: '';
-    position: absolute;
-    width: 1rem;
-    height: 2rem;
-    bottom: 100%;
-    right: 0;
-    border-bottom-right-radius: .5rem;
-    box-shadow: 0 1rem 0 var(--clr-white);
-}
-/* CONFIGURACION DE EFECTO DEL ASIDE CON EL MAIN PARA QUE PAREZCAN QUE ESTAN UNIDOS */
-
-.wrapper aside nav .menu li .boton-menu.active::after {
-    content: '';
-    position: absolute;
-    width: 1rem;
-    height: 2rem;
-    top: 100%;
-    right: 0;
-    border-top-right-radius: .5rem;
-    box-shadow: 0 -1rem 0 var(--clr-white);
-}
-/* CONFIGURACION DE EFECTO DEL ASIDE CON EL MAIN PARA QUE PAREZCAN QUE ESTAN UNIDOS */
-
-.wrapper aside nav .menu li .boton-menu.boton-carrito {
-    margin-top: 2rem;
+.wrapper main nav .menu li .boton-menu.boton-carrito {
+    margin-top: 1rem;
 }
 
-.wrapper aside nav .menu li .boton-menu.boton-carrito .numero {
+.wrapper main nav .menu li .boton-menu.boton-carrito .numero {
     background-color: var(--clr-white);
     color: var(--clr-main);
     padding: 0.15rem .25rem;
@@ -148,29 +123,21 @@ body .banner{
 }
 /* CONFIGURACION DEL NUMERO DEL CARRITO */
 
-.wrapper aside nav .menu li .boton-menu.boton-carrito.active .numero {
+.wrapper main nav .menu li .boton-menu.boton-carrito.active .numero {
     background-color: var(--clr-main);
     color: var(--clr-white);
 }
 
-.wrapper aside nav .menu li .boton-menu .bi-hand-index-thumb-fill {
+.wrapper main nav .menu li .boton-menu .bi-hand-index-thumb-fill {
     transform: rotateZ(90deg);
 }
 /* CONFIGURACION LA MANO QUE ESTA EN LA SECCION VINO */
 
-.wrapper aside footer .texto-footer {
+.wrapper main footer .texto-footer {
     color: var(--clr-mainlight);
     font-size: 0.85rem;
 }
-
-.wrapper main {
-    background-color: var(--clr-white);
-    margin: 1rem;
-    margin-left: 0;
-    border-radius: 2rem;
-    padding: 3rem;
-}
-/* CONFIGURACION DEL MAIN (PARTE DERECHA DE LA PAGINA) */
+/* CONFIGURACION DEL FOOTER DEL MENU DESPLEGABLE */
 
 .wrapper main .titulo-principal {
     color: var(--clr-mainlight);
@@ -193,16 +160,16 @@ body .banner{
     color: var(--clr-white);
     padding: .5rem;
     border-radius: 1rem;
-    margin-top: -1rem;
+    margin: 0 10px;
     position: relative;
     gap: 0.25rem;
-    width: 100%;
 }
 /* CONFIGURACION LA CAJA QUE CONTIENE PRECIO, TITULO, BOTON DE COMPRA, ETC */
 
 .wrapper main .productos .tarjeta-producto .disabled{
     display: none;
 }
+/* CONFIGURACION DE LOS ELEMENTOS DE LA CAJA QUE NO QUIERO QUE SE VEAN*/
 
 .wrapper main .productos .tarjeta-producto .producto {
     font-size: 1rem;
@@ -346,7 +313,7 @@ body .boton-whatsapp img {
 @media (max-width:575px){
     
     .wrapper main .productos .imagen-producto {
-        height: 180px;
+        height: 110px;
     }
     /* CONFIGURACION LA ALTURA DE LA IMAGEN DEL PRODUCTO */
 

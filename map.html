@@ -18,57 +18,68 @@
     <!-- Contenedor principal -->
     <div class="wrapper">
 
-        <!-- Barra lateral (aside) -->
-        <aside>
-
-            <!-- Encabezado del aside -->
-            <header>
-                <h1 class="logo">Emporio Areco</h1>
-            </header>
-
-            <!-- Menú de categorías -->
-            <nav>
-                <ul class="menu">
-
-                    <!-- Botones de categorías y enlace al carrito -->
-                    <li>
-                        <a class="boton-menu boton-volver" href="index.html">
-                            <i class="bi bi-arrow-left-circle-fill"></i>Seguir Comprando</a>
-                    </li>
-                    <li>
-                        <a class="boton-menu boton-carrito" href="carrito.html"><i
-                                class="bi bi-cart-fill"></i>Carrito</a>
-                    </li>
-                    <li>
-                        <button class="boton-menu active">
-                            <i class="bi bi-geo-alt-fill"></i><a href="map.html">Ubicacion</a></button>
-                    </li>
-                </ul>
-            </nav>
-
-            <!-- Pie del aside -->
-            <footer>
-                <p class="texto-footer">© 2023 Eddie Areco</p>
-            </footer>
-        </aside>
-
         <!-- Contenido principal (main) -->
         <main>
+            <div class="row mb-5 align-content-center">
+                <button class="btn mx-auto col-1" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+                    <i class="bi bi-menu-button-wide-fill h4"></i></button>
 
-            <!-- Título principal del main -->
-            <h2 class="titulo-principal">Ubicación</h2>
+                <!-- Título principal del main -->
+                <h2 class="titulo-principal text-center my-auto h1 col-11">Ubicación</h2>
 
-            <!-- Campo de ingreso y busqueda de direccion -->
-            <div class="input-group w-100 mb-3 mx-auto botones-busqueda-direccion">
-                <input id="direccion" class="form-control busqueda-direccion"
-                    placeholder="Ingrese dirección. Ej: Calle falsa 123, cordoba">
-                <button id="busquedaDireccion" class="btn btn-warning  boton-lupa"><i class="bi bi-search"></i></button>
-            </div>
+                <!-- Menu desplegable -->
+                <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+                    aria-labelledby="offcanvasWithBothOptionsLabel">
+                    <div class="offcanvas-header">
 
-            <!-- Contenedor del mapa -->
-            <div id="map">
+                        <!-- Encabezado del menu desplegable -->
+                        <header>
+                            <h1 class="logo text-center">Emporio Areco</h1>
+                        </header>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
 
-            </div>
+                        <!-- Menú de categorías -->
+                        <nav>
+                            <ul class="menu">
+
+                                <!-- Botones de categorías y enlace al carrito -->
+                                <li>
+                                    <a class="boton-menu boton-volver" href="index.html">
+                                        <i class="bi bi-arrow-left-circle-fill"></i>Seguir Comprando</a>
+                                </li>
+                                <li>
+                                    <a class="boton-menu boton-carrito" href="carrito.html"><i
+                                            class="bi bi-cart-fill"></i>Carrito</a>
+                                </li>
+                                <li>
+                                    <button class="boton-menu active">
+                                        <i class="bi bi-geo-alt-fill"></i><a href="map.html">Ubicacion</a></button>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <!-- Pie del menu desplegable -->
+                        <footer>
+                            <p class="texto-footer text-center mt-1">© 2023 Eddie Areco</p>
+                        </footer>
+                    </div>
+                </div>
+
+                <!-- Campo de ingreso y busqueda de direccion -->
+                <div class="input-group w-100 mt-5 mb-3 mx-auto botones-busqueda-direccion">
+                    <input id="direccion" class="form-control busqueda-direccion"
+                        placeholder="Ingrese dirección. Ej: Calle falsa 123, cordoba">
+                    <button id="busquedaDireccion" class="btn btn-warning  boton-lupa"><i
+                            class="bi bi-search"></i></button>
+                </div>
+
+                <!-- Contenedor del mapa -->
+                <div id="map">
+
+                </div>
 
         </main>
     </div>

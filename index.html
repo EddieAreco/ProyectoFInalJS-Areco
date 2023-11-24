@@ -21,71 +21,82 @@
     <!-- Contenedor principal -->
     <div class="wrapper">
 
-        <!-- Barra lateral (aside) -->
-        <aside>
-
-            <!-- Encabezado del aside -->
-            <header>
-                <h1 class="logo text-center">Emporio Areco</h1>
-            </header>
-
-            <!-- Menú de categorías -->
-            <nav>
-                <ul class="menu">
-
-                    <!-- Botones de categorías y enlace al carrito -->
-                    <li>
-                        <button id="ofertas" class="boton-menu boton-categoria"><i
-                                class="bi bi-star-fill"></i></i>Ofertas</button>
-                    </li>
-                    <li>
-                        <button id="gaseosas" class="boton-menu boton-categoria"><i
-                                class="bi bi-cup-straw"></i>Gaseosas</a></button>
-                    </li>
-                    <li>
-                        <button id="aguas" class="boton-menu boton-categoria"><i
-                                class="bi bi-droplet-fill"></i>Aguas</button>
-                    </li>
-                    <li>
-                        <button id="vinos" class="boton-menu boton-categoria"><i
-                                class="bi bi-hand-index-thumb-fill"></i>Vinos</button>
-                    </li>
-                    <li>
-                        <button id="alcohol" class="boton-menu boton-categoria"><i
-                                class="bi bi-trash2-fill"></i>Alcohol</button>
-                    </li>
-                    <li>
-                        <button id="cervezas" class="boton-menu boton-categoria"><i
-                                class="bi bi-stars"></i></i>Cervezas</button>
-                    </li>
-                    <li>
-                        <a class="boton-menu boton-carrito active" href="carrito.html"><i
-                                class="bi bi-cart-fill"></i>Carrito <span id="numero-carrito"
-                                class="numero">0</span></a>
-                    </li>
-                    <li>
-                        <button class="boton-menu"><i class="bi bi-geo-alt-fill"></i><a
-                                href="map.html">Ubicacion</a></button>
-                    </li>
-                </ul>
-            </nav>
-
-            <!-- Pie del aside -->
-            <footer>
-                <p class="texto-footer text-center">© 2023 Eddie Areco</p>
-            </footer>
-        </aside>
-
         <!-- Contenido principal (main) -->
         <main>
-
+            <div class="row mb-5 align-content-center">
+            <button class="btn mx-auto col-1" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+                <i class="bi bi-menu-button-wide-fill h4"></i></button>
+                
             <!-- Título principal del main -->
-            <h2 class="titulo-principal" id="titulo-principal">Ofertas</h2>
+            <h2 class="titulo-principal text-center my-auto h1 col-11" id="titulo-principal">Ofertas</h2>
+            </div>
+
+            <!-- Menu desplegable -->
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1"
+                id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                <div class="offcanvas-header">
+
+                    <!-- Encabezado del menu desplegable -->
+                    <header>
+                        <h1 class="logo text-center">Emporio Areco</h1>
+                    </header>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+
+                    <!-- Menú de categorías -->
+                    <nav>
+                        <ul class="menu">
+
+                            <!-- Botones de categorías y enlace al carrito -->
+                            <li>
+                                <button id="ofertas" class="boton-menu boton-categoria"><i
+                                        class="bi bi-star-fill"></i></i>Ofertas</button>
+                            </li>
+                            <li>
+                                <button id="gaseosas" class="boton-menu boton-categoria"><i
+                                        class="bi bi-cup-straw"></i>Gaseosas</a></button>
+                            </li>
+                            <li>
+                                <button id="aguas" class="boton-menu boton-categoria"><i
+                                        class="bi bi-droplet-fill"></i>Aguas</button>
+                            </li>
+                            <li>
+                                <button id="vinos" class="boton-menu boton-categoria"><i
+                                        class="bi bi-hand-index-thumb-fill"></i>Vinos</button>
+                            </li>
+                            <li>
+                                <button id="alcohol" class="boton-menu boton-categoria"><i
+                                        class="bi bi-trash2-fill"></i>Alcohol</button>
+                            </li>
+                            <li>
+                                <button id="cervezas" class="boton-menu boton-categoria"><i
+                                        class="bi bi-stars"></i></i>Cervezas</button>
+                            </li>
+                            <li>
+                                <a class="boton-menu boton-carrito active" href="carrito.html"><i
+                                        class="bi bi-cart-fill"></i>Carrito <span id="numero-carrito"
+                                        class="numero">0</span></a>
+                            </li>
+                            <li>
+                                <button class="boton-menu"><i class="bi bi-geo-alt-fill"></i><a
+                                        href="map.html">Ubicacion</a></button>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <!-- Pie del menu desplegable -->
+                    <footer>
+                        <p class="texto-footer text-center mt-1">© 2023 Eddie Areco</p>
+                    </footer>
+                </div>
+            </div>
 
             <!--Barra e inputs de búsqueda -->
-            <input id="inputBusqueda" type="text" class="form-control fw-bolder mx-auto w-75 mb-3"
+            <input id="inputBusqueda" type="text" class="form-control fw-bolder ms-1 mb-3"
                 placeholder="Ingrese el producto que busca" aria-describedby="botonBuscar">
-            <div class="input-group mb-5 row">
+            <div class="input-group mb-5 row mx-auto">
                 <select id="ordenarProductos"
                     class="form-control filter-select mx-1 col-xl-2 col-lg-2 col-md-2 col-sm-12 my-1">
                     <option value="">Ordenar por...</option>
@@ -106,7 +117,7 @@
             </div>
 
             <!-- Contenedor de tarjetas de productos -->
-            <div class="row row-cols-xl-3 row-cols-lg-2 row-cols-md-2 row-col-sm-12 g-4" id="cardsProductos">
+            <div class="row row-cols-xl-3 row-cols-lg-2 row-cols-md-2 row-col-sm-12 g-4 mx-auto" id="cardsProductos">
                 <!-- cartas que son con js -->
             </div>
         </main>

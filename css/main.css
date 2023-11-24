@@ -355,6 +355,14 @@ body .boton-whatsapp img {
     .wrapper main .productos .tarjeta-producto .precio {
         margin-top: 5px;
     }
+
+    .wrapper main .contenedor-carrito .carrito-productos .carrito-producto {
+        max-width: 250px;
+    }
+
+    .wrapper main .contenedor-carrito .carrito-acciones {
+        max-width: 230px;
+    }
 }
 
 @media (max-width:575px) {

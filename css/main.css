@@ -59,6 +59,7 @@ body .banner{
     border-radius: 2rem;
     padding: 3rem;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 /* CONFIGURACION DEL MAIN */
 
@@ -151,7 +152,7 @@ body .banner{
 }
 
 .wrapper main .productos .imagen-producto {
-    height: 250px;
+    height: 280px;
 }
 /* CONFIGURACION LA ALTURA DE LA IMAGEN DEL PRODUCTO */
 
@@ -160,9 +161,6 @@ body .banner{
     color: var(--clr-white);
     padding: .5rem;
     border-radius: 1rem;
-    margin: 0 10px;
-    position: relative;
-    gap: 0.25rem;
 }
 /* CONFIGURACION LA CAJA QUE CONTIENE PRECIO, TITULO, BOTON DE COMPRA, ETC */
 
@@ -310,10 +308,19 @@ body .boton-whatsapp img {
 }
 /*CONFIGURACION BOTON WHATSAPP*/
 
+
+@media (max-width:460px){
+
+    .wrapper main .contenedor-principal-main{
+        min-width: 313px;
+    }
+
+}
+
 @media (max-width:575px){
     
     .wrapper main .productos .imagen-producto {
-        height: 110px;
+        height: 170px;
     }
     /* CONFIGURACION LA ALTURA DE LA IMAGEN DEL PRODUCTO */
 

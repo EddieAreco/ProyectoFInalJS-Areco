@@ -39,7 +39,7 @@ function agregarProductos(productosSeleccionados) {
         // Estructura HTML de cada carta de producto
         div.innerHTML = `
             <img src="${producto.img}" class="w-75 rounded mx-auto my-auto d-block imagen-producto mb-3" alt="${producto.titulo}">
-               <div class="tarjeta-producto row">
+               <div class="tarjeta-producto row justify-content-center mx-auto">
                  <h5 class="producto fw-bolder d-block col-10 mt-2">${producto.titulo}</h5>
                  <i id="${producto.id}" class="comprar bi bi-plus-square-fill col-1 mt-1 me-2 h4"></i>
                  <p class="precio fw-bolder d-block col-12">$ ${producto.precio}</p>

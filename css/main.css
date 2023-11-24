@@ -7,6 +7,7 @@
     --clr-red: #961818;
     --clr-gray: #eddddd;
 }
+
 /* DEFINO LAS VARIABLES GLOBALES DE LOS COLORES */
 
 * {
@@ -15,6 +16,7 @@
     box-sizing: border-box;
     font-family: 'Montserrat', Times, serif;
 }
+
 /* RESTABLEZCO VALORES QUE ESTAN POR DEFECTO */
 
 h1,
@@ -36,21 +38,24 @@ ul {
 ul {
     list-style-type: none;
 }
+
 /* QUITO EL ESTILO DE LAS LISTAS */
 
 a {
     text-decoration: none;
     color: var(--clr-white);
 }
+
 /* QUITO EL SUBRAYADO DE LOS ENLACES */
 
-body .banner{
+body .banner {
     background-color: var(--clr-mainlight);
 }
 
 .wrapper {
     background-color: var(--clr-main);
 }
+
 /* CONFIGURO EL CONTENEDOR GENERAL */
 
 .wrapper main {
@@ -61,17 +66,20 @@ body .banner{
     min-height: 100vh;
     overflow-x: hidden;
 }
+
 /* CONFIGURACION DEL MAIN */
 
 .wrapper main .logo {
     font-weight: 400;
     font-size: 1.4rem;
 }
+
 /* CONFIGURO EL LOGO */
 
-.wrapper main .offcanvas{
+.wrapper main .offcanvas {
     background-color: var(--clr-main);
 }
+
 /* CONFIGURO EL FONDO DEL MENU DESPLEGABLE */
 
 .wrapper main nav .menu {
@@ -79,6 +87,7 @@ body .banner{
     flex-direction: column;
     gap: .5rem;
 }
+
 /* CONFIGURO LA BARRA DE NAVEGACION DEL MENU DESPLEGABLE */
 
 .wrapper main nav .menu li .boton-menu {
@@ -95,6 +104,7 @@ body .banner{
     font-size: .85rem;
     width: 100%;
 }
+
 /* CONFIGURO EL LOS BOTONES DEL MENU DESPLEGABLE */
 
 .wrapper main nav .menu li .boton-menu.active {
@@ -104,12 +114,14 @@ body .banner{
     border-bottom-left-radius: 1rem;
     position: relative;
 }
+
 /* CONFIGURO LOS BOTONES QUE TENGAN UN ACTIVE EN SU CLASE */
 
 .wrapper main nav .menu li .boton-menu.active a {
     color: var(--clr-main);
     font-weight: 900;
 }
+
 /* CONFIGURO EL TEXTO DENTRO DE LOS BOTONES QUE TENGAN EL ACTIVE */
 
 .wrapper main nav .menu li .boton-menu.boton-carrito {
@@ -122,6 +134,7 @@ body .banner{
     padding: 0.15rem .25rem;
     border-radius: .25rem;
 }
+
 /* CONFIGURACION DEL NUMERO DEL CARRITO */
 
 .wrapper main nav .menu li .boton-menu.boton-carrito.active .numero {
@@ -132,12 +145,14 @@ body .banner{
 .wrapper main nav .menu li .boton-menu .bi-hand-index-thumb-fill {
     transform: rotateZ(90deg);
 }
+
 /* CONFIGURACION LA MANO QUE ESTA EN LA SECCION VINO */
 
 .wrapper main footer .texto-footer {
     color: var(--clr-mainlight);
     font-size: 0.85rem;
 }
+
 /* CONFIGURACION DEL FOOTER DEL MENU DESPLEGABLE */
 
 .wrapper main .titulo-principal {
@@ -145,6 +160,7 @@ body .banner{
     margin-bottom: 1rem;
     font-weight: 900;
 }
+
 /* CONFIGURACION DEL TITULO DEL MAIN */
 
 .wrapper main .productos {
@@ -154,6 +170,7 @@ body .banner{
 .wrapper main .productos .imagen-producto {
     height: 280px;
 }
+
 /* CONFIGURACION LA ALTURA DE LA IMAGEN DEL PRODUCTO */
 
 .wrapper main .productos .tarjeta-producto {
@@ -162,11 +179,13 @@ body .banner{
     padding: .5rem;
     border-radius: 1rem;
 }
+
 /* CONFIGURACION LA CAJA QUE CONTIENE PRECIO, TITULO, BOTON DE COMPRA, ETC */
 
-.wrapper main .productos .tarjeta-producto .disabled{
+.wrapper main .productos .tarjeta-producto .disabled {
     display: none;
 }
+
 /* CONFIGURACION DE LOS ELEMENTOS DE LA CAJA QUE NO QUIERO QUE SE VEAN*/
 
 .wrapper main .productos .tarjeta-producto .producto {
@@ -178,11 +197,13 @@ body .banner{
     color: var(--clr-mainlight);
     cursor: pointer;
 }
+
 /* CONFIGURACION BOTON DE COMPRA */
 
 .wrapper main .productos .tarjeta-producto small {
     color: var(--clr-mainlight);
 }
+
 /* CONFIGURACION DEL TEXTO DE DESCUENTO */
 
 /* SECCION CARRITO.HTML */
@@ -192,12 +213,14 @@ body .banner{
     flex-direction: column;
     gap: 2.5rem;
 }
+
 /* CONFIGURACION DEL CONTENEDOR DONDE ESTAN LOS PRODUCTOS Y LA ACCIONES SOBRE EL CARRITO */
 
 .wrapper main .contenedor-carrito .carrito-vacio {
     color: var(--clr-main);
     font-weight: 900;
 }
+
 /* CONFIGURACION DEL TEXTO CARRITO VACIO */
 
 .wrapper main .contenedor-carrito .carrito-productos .carrito-producto {
@@ -211,6 +234,7 @@ body .banner{
     font-weight: 900;
     border-radius: 1rem;
 }
+
 /* CONFIGURACION DEL CONTENEDOR DONDE ESTAN LOS PRODUCTOS COMPRADOS DEL CARRITO */
 
 .wrapper main .contenedor-carrito .carrito-productos .carrito-producto .carrito-producto-imagen {
@@ -228,12 +252,14 @@ body .banner{
     color: var(--clr-red);
     cursor: pointer;
 }
+
 /* CONFIGURACION DEL DEL TACHO PAR ELIMINAR PRODUCTOS */
 
 .wrapper main .contenedor-carrito .carrito-acciones {
     display: flex;
     justify-content: space-between;
 }
+
 /* CONFIGURACION DEL CONTENEDOR DONDE ESTAN LAS ACCIONES SOBRE EL CARRITO */
 
 .wrapper main .contenedor-carrito .carrito-acciones .carrito-acciones-izquierda .carrito-acciones-vaciar {
@@ -246,6 +272,7 @@ body .banner{
     cursor: pointer;
     font-weight: 900;
 }
+
 /* CONFIGURACION DEL BOTON VACIAR CARRITO */
 
 .wrapper main .contenedor-carrito .carrito-acciones .carrito-acciones-derecha {
@@ -263,6 +290,7 @@ body .banner{
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
 }
+
 /* CONFIGURACION DEL CONTENEDOR DONDE ESTAN LAS ACCIONES DE LA DERECHA */
 
 .wrapper main .contenedor-carrito .carrito-acciones .carrito-acciones-derecha .carrito-acciones-comprar {
@@ -276,21 +304,24 @@ body .banner{
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
 }
+
 /* CONFIGURACION DEL CONTENEDOR DONDE ESTA EL BOTON COMPRAR AHORA */
 
 .wrapper main .contenedor-carrito .disabled {
     display: none;
 }
 
-.wrapper main .input-group button{
+.wrapper main .input-group button {
     height: 50px;
 }
+
 /* CONFIGURACION DE LOS BOTONES DE BUSQUEDA */
 
-.wrapper main #map{
+.wrapper main #map {
     height: 70vh;
     width: 100%;
 }
+
 /* CONFIGURACION DE DIMENSION DEL MAPA */
 
 body .boton-whatsapp {
@@ -299,6 +330,7 @@ body .boton-whatsapp {
     bottom: 20px;
     right: 20px;
 }
+
 /*CONFIGURACION BOTON WHATSAPP*/
 
 body .boton-whatsapp img {
@@ -306,46 +338,59 @@ body .boton-whatsapp img {
     height: 50px;
     float: right;
 }
+
 /*CONFIGURACION BOTON WHATSAPP*/
 
 
-@media (max-width:460px){
+@media (max-width:460px) {
 
-    .wrapper main .contenedor-principal-main{
+    .wrapper main .contenedor-principal-main {
         min-width: 313px;
     }
 
+    .wrapper main .productos .tarjeta-producto .producto {
+        max-width: 140px;
+    }
+
+    .wrapper main .productos .tarjeta-producto .precio {
+        margin-top: 5px;
+    }
 }
 
-@media (max-width:575px){
-    
+@media (max-width:575px) {
+
     .wrapper main .productos .imagen-producto {
         height: 170px;
     }
+
     /* CONFIGURACION LA ALTURA DE LA IMAGEN DEL PRODUCTO */
 
-    .wrapper main .input-group{
+    .wrapper main .input-group {
         display: flex;
         flex-direction: column;
     }
+
     /* CONFIGURACION GRUPO BOTONES FILTRADO */
 
-    .wrapper main .input-group select{
+    .wrapper main .input-group select {
         width: 100%;
     }
+
     /* CONFIGURACION SELECT DE FILTRADO */
 
 
-    .wrapper main .input-group input{
+    .wrapper main .input-group input {
         width: 100%;
     }
+
     /* CONFIGURACION INPUTS DE FILTRADO */
 
     .wrapper main .contenedor-carrito .carrito-productos .carrito-producto {
-       display: flex;
-       flex-direction: column;
-       margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
     }
+
     /* CONFIGURACION CONTENEDOR PRODUCTOS EN EL CARRITO */
 
     .wrapper main .contenedor-carrito .carrito-productos .carrito-producto .carrito-producto-imagen {
@@ -353,47 +398,53 @@ body .boton-whatsapp img {
         height: 8rem;
         border-radius: 1rem;
     }
+
     /* CONFIGURACION IMAGEN PRODUCTOS EN EL CARRITO */
 
-    .wrapper main .contenedor-carrito .carrito-productos .carrito-producto .carrito-producto-nombre{
+    .wrapper main .contenedor-carrito .carrito-productos .carrito-producto .carrito-producto-nombre {
         display: flex;
         align-items: center;
     }
+
     /* CONFIGURACION SECCION TITULO PRODUCTOS EN EL CARRITO */
 
-    .wrapper main .contenedor-carrito .carrito-productos .carrito-producto .carrito-producto-nombre h3{
+    .wrapper main .contenedor-carrito .carrito-productos .carrito-producto .carrito-producto-nombre h3 {
         margin-left: 10px;
         font-size: 1rem;
     }
+
     /* CONFIGURACION SECCION TITULO NOMBRE DE PRODUCTO EN EL CARRITO */
 
-    .wrapper main .contenedor-carrito .carrito-productos .carrito-producto .carrito-producto-cantidad{
+    .wrapper main .contenedor-carrito .carrito-productos .carrito-producto .carrito-producto-cantidad {
         display: flex;
         align-items: center;
     }
+
     /* CONFIGURACION SECCION CANTIDAD PRODUCTOS EN EL CARRITO */
 
-    .wrapper main .contenedor-carrito .carrito-productos .carrito-producto .carrito-producto-cantidad small{
+    .wrapper main .contenedor-carrito .carrito-productos .carrito-producto .carrito-producto-cantidad small {
         margin-right: 15px;
     }
 
-    .wrapper main .contenedor-carrito .carrito-productos .carrito-producto .carrito-producto-precio{
+    .wrapper main .contenedor-carrito .carrito-productos .carrito-producto .carrito-producto-precio {
         display: flex;
         align-items: center;
     }
+
     /* CONFIGURACION SECCION PRECIO PRODUCTOS EN EL CARRITO */
 
-    .wrapper main .contenedor-carrito .carrito-productos .carrito-producto .carrito-producto-precio small{
+    .wrapper main .contenedor-carrito .carrito-productos .carrito-producto .carrito-producto-precio small {
         margin-right: 15px;
     }
 
-    .wrapper main .contenedor-carrito .carrito-productos .carrito-producto .cantidad-producto-subtotal{
+    .wrapper main .contenedor-carrito .carrito-productos .carrito-producto .cantidad-producto-subtotal {
         display: flex;
         align-items: center;
     }
+
     /* CONFIGURACION SECCION SUB TOTAL PRODUCTOS EN EL CARRITO */
 
-    .wrapper main .contenedor-carrito .carrito-productos .carrito-producto .cantidad-producto-subtotal small{
+    .wrapper main .contenedor-carrito .carrito-productos .carrito-producto .cantidad-producto-subtotal small {
         margin-right: 15px;
     }
 
@@ -402,27 +453,31 @@ body .boton-whatsapp img {
         flex-direction: column;
         width: 100%;
     }
+
     /* CONFIGURACION CONTENEDOR BOTONES DE PRODUCTOS EN EL CARRITO */
 
-    .wrapper main .contenedor-carrito .carrito-acciones .carrito-acciones-izquierda .carrito-acciones-vaciar{
+    .wrapper main .contenedor-carrito .carrito-acciones .carrito-acciones-izquierda .carrito-acciones-vaciar {
         width: 100%;
         margin-bottom: 8px;
     }
+
     /* CONFIGURACION BOTON VACIAR PRODUCTOS EN EL CARRITO */
 
-    .wrapper main .contenedor-carrito .carrito-acciones-derecha{
+    .wrapper main .contenedor-carrito .carrito-acciones-derecha {
         display: flex;
         flex-direction: column;
     }
+
     /* CONFIGURACION BOTONES DERECHA DE PRODUCTOS EN EL CARRITO */
 
-    .wrapper main .contenedor-carrito .carrito-acciones .carrito-acciones-derecha .carrito-acciones-total{
+    .wrapper main .contenedor-carrito .carrito-acciones .carrito-acciones-derecha .carrito-acciones-total {
         margin-bottom: 8px;
     }
 
-    .wrapper main .input-group .boton-lupa{
+    .wrapper main .input-group .boton-lupa {
         height: 33px;
     }
+
     /* CONFIGURACION LUPA DE BUSQUEDA DE DIRECCION */
 
     .wrapper main .contenedor-carrito .disabled {

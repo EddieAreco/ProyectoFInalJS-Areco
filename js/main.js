@@ -295,18 +295,43 @@ inputBusqueda.addEventListener("input", () => {
     // Accedo a todos los productos dentro del contenedor de nombre productos
     const buscarProductos = document.querySelectorAll(".productos");
 
+    // Elemento HTML que muestra el mensaje "No hay productos"
+    let noHayProductos = document.getElementById("mensajeNoHayProductos");
+
+    // Variable para rastrear si se encontraron productos que coinciden con la búsqueda
+    let productosEncontrados = false;
+
     // Itero sobre todos los productos para luego proceder a la búsqueda
     buscarProductos.forEach(producto => {
 
-        const nombreProducto = producto.querySelector(".producto").textContent.toLowerCase();;
+        // Obtengo el nombre del producto y lo convierto a minúsculas para hacer la comparación de mayúsculas a minúsculas
+        const nombreProducto = producto.querySelector(".producto").textContent.toLowerCase();
 
-        // COMPRUEBO SI EL NOMBRE DEL PRODUCTO CONTIENEN EL VALOR DE BUSQUEDA Y SINO NO ESTA, QUE OCULTE EL PRODUCTO
+        // Compreubo si el nombre del producto contiene el valor de búsqueda y sino, que oculte el producto
         if (nombreProducto.includes(valorBusqueda)) {
             producto.style.display = "block"; // Muestro el producto
+
+            // Indico que se encontraron productos que coinciden con la búsqueda
+            productosEncontrados = true;
+
         } else {
             producto.style.display = "none"; // Oculto el producto
+
         }
     });
+
+    // Muestro el mensaje de "No hay productos" en pantalla si no se encontraron productos
+    if (!productosEncontrados) {
+        noHayProductos.classList.remove("disabled");
+    } else {
+        noHayProductos.classList.add("disabled");
+    }
+
+    // Verificar si el valor de búsqueda está vacío (porque el usuario borró todo el contenido que escribió) y mostrar todos los productos nuevamente
+    if (inputBusqueda.value === "") {
+        agregarProductos(data);
+        noHayProductos.classList.add("disabled");
+    }
 });
 
 // Aplicar eventos relacionados con el filtro de productos
@@ -324,7 +349,7 @@ function filtrar() {
     // Aplicar filtro de categoría si está definido para que si pido el filtrado, se haga sobre los productos que ya están filtados por categoría
     if (productosFiltradosPorId) {
         productosFiltrados = productosFiltradosPorId;
-    } else{
+    } else {
         productosFiltrados = [...data];
     }
 
@@ -342,13 +367,27 @@ function filtrar() {
         productosFiltrados.sort((a, b) => a.precio - b.precio);
     }
 
-    // Obtiene los productos ordenados según el filtro seleccionado
+    // Asigno en una variable el elemento del mensaje de "No hay productos"
+    const mensajeNoHayProductos = document.getElementById("mensajeNoHayProductos");
+
+    // Obtengo los productos ordenados según el filtro seleccionado
     const productosOrdenados = ordenarProductos(productosFiltrados, valorSeleccionado);
 
-    // Actualiza la visualización de los productos
-    card.innerHTML = "";
+    // Muestro u oculto el mensaje según si no hay productos después de aplicar los filtros
+    if (productosOrdenados.length === 0) {
 
-    agregarProductos(productosOrdenados);
+        //Hago que aparezca el mensaje de "No hay...." al no haber productos que cumplan con el filtro ingresado por el cliente
+        mensajeNoHayProductos.classList.remove("disabled");
+        card.innerHTML = "";
+
+    } else {
+
+        // Actualizo la visualización de los productos primero vaciando el contenido de card y después llamando a que se muestren todos los productos que estén dentro de productos ordenados
+        card.innerHTML = "";
+
+        agregarProductos(productosOrdenados);
+    }
+
 }
 
 // Función para ordenar productos según criterio seleccionado
@@ -376,7 +415,7 @@ function ordenarProductos(data, tipoOrden) {
     return productosOrdenados;
 }
 
-// Agregar evento relacionado con el botón de limpiar filtros
+// Agrego evento relacionado con el botón de limpiar filtros
 
 limpiar.addEventListener("click", () => {
     // Vacío todos los filtros realizados y se vuelven a mostrar los productos de la base data
@@ -385,10 +424,11 @@ limpiar.addEventListener("click", () => {
     precioMinimo.value = "";
     selectOrdenar.value = "";
     inputBusqueda.value = "";
+    mensajeNoHayProductos.classList.add("disabled");
     agregarProductos(data);
 })
 
-// Obtener elementos HTML relacionados con el rango de precios
+// Obtengo elementos HTML relacionados con el rango de precios
 const precioMaximo = document.querySelector("#precioMaximo");
 const precioMinimo = document.querySelector("#precioMinimo");
 

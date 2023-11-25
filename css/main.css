@@ -204,6 +204,10 @@ body .banner {
     color: var(--clr-mainlight);
 }
 
+.wrapper main .disabled{
+    display: none;
+}
+
 /* CONFIGURACION DEL TEXTO DE DESCUENTO */
 
 /* SECCION CARRITO.HTML */
@@ -290,7 +294,6 @@ body .banner {
     text-transform: uppercase;
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
-    text-align: center;
 }
 
 /* CONFIGURACION DEL CONTENEDOR DONDE ESTAN LAS ACCIONES DE LA DERECHA */
